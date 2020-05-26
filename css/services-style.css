@@ -1,0 +1,7 @@
+.circulo-informacao{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: red;
+    float: left;
+}
