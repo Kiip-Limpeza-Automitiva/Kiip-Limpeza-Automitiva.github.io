@@ -26,6 +26,7 @@
         
     </head>
     <body id="page-top">
+        <div id="config">http://localhost:3000</div>
 
         <!-- Menu de navegação-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -294,7 +295,9 @@
                             </div>
                             <label>Serviços</label>
                             <div id="services-api">
-                                
+                                <div class="spinner-border" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
                             </div>
                             <script>
                                 
@@ -329,5 +332,6 @@
         <script src="js/scripts.js"></script>
         <script src="./js/carregar-serviços.js"></script>
         <script src="./js/agendamento-servico.js"></script>
+        <script src="./config.js"></script>
     </body>
 </html>

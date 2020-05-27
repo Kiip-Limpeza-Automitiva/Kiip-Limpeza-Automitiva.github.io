@@ -5,3 +5,7 @@
     background-color: red;
     float: left;
 }
+
+#config{
+    display: none;
+}

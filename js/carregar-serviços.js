@@ -1,3 +1,5 @@
+var $url = document.getElementById('config').innerHTML;
+
 const $containerServices = document.getElementById('services-api')
 
 var requestOptions = {
@@ -5,13 +7,13 @@ var requestOptions = {
     redirect: 'follow'
 };
   
-fetch("http://localhost:3000/services", requestOptions)
+fetch(`${$url}/services`, requestOptions)
     .then(response => response.json())
     .then(result => carregarServices(result))
     .catch(error => console.log('error', error));
 
 const carregarServices = (data) => {
-    // console.log(data)
+    
     
     var servicosAPI = '';
     for (let i = 0; i < data.length; i++) {

@@ -1,3 +1,5 @@
+var $url = document.getElementById('config').innerHTML;
+
 var $form = document.getElementById('agendamentoServico');
 var $nome = document.getElementById('txt_nome');
 var $email = document.getElementById('txt_email');
@@ -9,7 +11,7 @@ var $btnEnviar = document.getElementById('btn_enviar');
 
 
 const enviaDados = () => { 
-    
+
     var dados = {
         name: $nome.value,
         telefone: $telefone.value,
@@ -31,7 +33,7 @@ const enviaDados = () => {
     redirect: 'follow'
     };
 
-    const result = fetch("http://localhost:3000/scheduling", requestOptions)
+    const result = fetch(`${$url}/scheduling`, requestOptions)
     .then(response => response.json())
     .then(result => recarregar(result))
     .catch(error => console.log('error', error));
